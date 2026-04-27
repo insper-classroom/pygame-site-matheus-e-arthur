@@ -249,6 +249,80 @@ figcaption {
   object-position: center;
 }
 
+.Log {
+  width: min(70rem, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: rgba(255, 248, 223, 0.97);
+  border: 0.35rem solid var(--marrom);
+  border-radius: 0.9rem;
+  box-shadow:
+    0 0.5rem 0 var(--marrom-escuro),
+    0 1rem 2rem var(--sombra);
+}
+
+.Log h2 {
+  margin-bottom: 1.4rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: var(--azul);
+  text-shadow: 0.12rem 0.12rem 0 var(--dourado);
+}
+
+.Log h3 {
+  width: fit-content;
+  margin: 1.2rem 0 0.65rem;
+  padding: 0.35rem 0.7rem;
+  color: var(--pergaminho-claro);
+  background: var(--verde);
+  border: 0.16rem solid var(--marrom-escuro);
+  border-radius: 0.35rem;
+}
+
+.Log h3:first-of-type {
+  margin-top: 0;
+}
+
+.Log ul {
+  position: relative;
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 1rem 2rem;
+  background: var(--pergaminho);
+  border: 0.2rem solid var(--marrom-claro);
+  border-radius: 0.7rem;
+  box-shadow: 0 0.35rem 0 rgba(104, 65, 34, 0.28);
+}
+
+.Log ul::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0.9rem;
+  width: 0.18rem;
+  background: var(--dourado);
+  border-radius: 999px;
+}
+
+.Log li {
+  position: relative;
+  list-style: none;
+}
+
+.Log li::before {
+  content: "";
+  position: absolute;
+  top: 0.72rem;
+  left: -1.26rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  background: var(--vermelho);
+  border: 0.12rem solid var(--marrom-escuro);
+  border-radius: 50%;
+}
+
 .rodape {
   margin-bottom: 2rem;
   padding: 1.35rem;
@@ -294,5 +368,9 @@ figcaption {
 
   .secao-cabecalho .etiqueta {
     order: -1;
+  }
+
+  .Log {
+    width: min(100% - 2rem, 70rem);
   }
 }
