@@ -3,43 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veil of the undead</title>
-
+    <title>Veil of the Undead</title>
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header class = "cabeçalho">
-      <h1> Veil of the Undead</h1>
-      <img class = "img_carregamento" src="img/Tela_Loading.png" alt="imagem tela de carregamento do jogo"/>
+    <header class="cabecalho">
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Imagens</a>
+        <a href="#rascunho">Rascunho</a>
+      </nav>
+
+      <section class="hero">
+        <div class="hero__texto">
+          <p class="etiqueta">Tower Defense em Pygame</p>
+          <h1>Veil of the Undead</h1>
+          <p>
+            Proteja o reino, resista às hordas e defenda o castelo contra
+            criaturas sedentas por sangue e preciosidades.
+          </p>
+        </div>
+
+        <figure class="hero__imagem">
+          <img
+            src="img/Tela_Loading.png"
+            alt="Tela de carregamento do jogo Veil of the Undead"
+          />
+        </figure>
+      </section>
     </header>
 
-    <div class = "container">
-      <img src="img/onda_1.png" alt="onda 1">
-      <img src="img/castelo.png" alt="castelo do jogo">
-      <img src="img/onda_5.png" alt="onda 5">
-    </div>
+    <main class="conteudo-principal">
+      <section class="painel" id="sobre" aria-labelledby="titulo-sobre">
+        <div class="secao-cabecalho">
+          <p class="etiqueta">Sobre o jogo</p>
+          <h2 id="titulo-sobre">Uma batalha pela sobrevivência do castelo</h2>
+        </div>
 
-    <div class = "informações">
-      <h2>Sobre o jogo</h2>
+        <div class="sobre-grid">
+          <article class="cartao">
+            <h3>Gênero</h3>
+            <p>Tower Defense com ação, estratégia e progressão por ondas.</p>
+          </article>
 
-      <ul class="Lista geral">
-        <li>Jogo de Tower Defense</li>
-        <li>Singleplayer</li>
+          <article class="cartao">
+            <h3>Modo</h3>
+            <p>Singleplayer, feito para uma jornada individual de defesa.</p>
+          </article>
 
-        <li>
-          Detalhes do jogo:
-          <ul class = "Lista detalhes">
-            <li>O jogo tem como objetivo proteger o castelo com todas as suas forças das criaturas que estão ao redor sedentas por sangue e preciosidades</li>
-            <li>Enfrente as ordas, ganhe recompensas, construa proteções e aprimore suas habilidades</li>
-            <li>Prepare-se para grandes desafios...</li>
-          </ul>  
-        </li>
+          <article class="cartao">
+            <h3>Objetivo</h3>
+            <p>
+              Sobreviva às hordas, ganhe recompensas, fortaleça suas defesas e
+              impeça que os inimigos destruam o castelo.
+            </p>
+          </article>
+        </div>
 
-      </ul>
-    </div>
+        <ul class="lista-detalhes">
+          <li>Enfrente criaturas cada vez mais difíceis a cada onda.</li>
+          <li>Use recompensas para melhorar proteções e habilidades.</li>
+          <li>Planeje sua defesa antes que a próxima horda chegue.</li>
+        </ul>
+      </section>
 
-    <footer class  = "rodape">
+      <section class="painel galeria" id="galeria" aria-labelledby="titulo-galeria">
+        <div class="secao-cabecalho">
+          <p class="etiqueta">Demonstrações</p>
+          <h2 id="titulo-galeria">Imagens do jogo</h2>
+        </div>
+
+        <div class="galeria-grid">
+          <figure>
+            <img src="img/onda_1.png" alt="Demonstração da primeira onda do jogo" />
+            <figcaption>Início da jornada</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/castelo.png" alt="Mapa interno do castelo do jogo" />
+            <figcaption>Mapa do castelo</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/onda_5.png" alt="Demonstração de uma onda avançada do jogo" />
+            <figcaption>Onda avançada</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="painel informacoes" aria-labelledby="titulo-info">
+        <div class="secao-cabecalho">
+          <p class="etiqueta">Informações</p>
+          <h2 id="titulo-info">Como o jogador avança</h2>
+        </div>
+
+        <div class="informacoes__conteudo">
+          <article>
+            <h3>Preparação</h3>
+            <p>
+              Antes de cada horda, o jogador analisa o cenário e se prepara para
+              defender o castelo.
+            </p>
+          </article>
+
+          <article>
+            <h3>Combate</h3>
+            <p>
+              Durante o ataque, é preciso reagir rápido, usar habilidades e
+              impedir que os inimigos avancem.
+            </p>
+          </article>
+
+          <article>
+            <h3>Evolução</h3>
+            <p>
+              A cada rodada, novas recompensas ajudam o cavaleiro a ficar mais
+              forte para os próximos desafios.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="painel rascunho" id="rascunho" aria-labelledby="titulo-rascunho">
+        <div class="secao-cabecalho">
+          <p class="etiqueta">Processo</p>
+          <h2 id="titulo-rascunho">Esboço em papel</h2>
+        </div>
+
+        <figure class="rascunho__figura">
+          <img
+            src="rascunho_site.jpeg"
+            alt="Rascunho em papel usado para planejar a página do jogo"
+          />
+          <figcaption>
+            Primeiro planejamento visual da página, com área de imagem,
+            demonstrações e seção sobre o jogo.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Matheus e Arthur</p>
       <p>Você conseguirá ser o primeiro cavaleiro digno do castelo?</p>
-      <p>Boa sorte.</p>
     </footer>
   </body>
+</html>
