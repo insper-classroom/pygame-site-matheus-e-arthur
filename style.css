@@ -181,7 +181,8 @@ h1 {
 .cartao,
 .informacoes article,
 .galeria figure,
-.rascunho__figura {
+.rascunho__figura,
+.video__moldura {
   background: var(--pergaminho-claro);
   border: 0.22rem solid var(--marrom-claro);
   border-radius: 0.7rem;
@@ -238,8 +239,119 @@ figcaption {
   background: #ffe09a;
 }
 
-.rascunho__figura {
+.rascunho__figura,
+.video__moldura {
   overflow: hidden;
+}
+
+.video__link {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  color: #ffffff;
+  background: #202020;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  text-decoration: none;
+}
+
+.video__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), transparent 38%),
+    linear-gradient(transparent 58%, rgba(0, 0, 0, 0.55));
+}
+
+.video__topo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.video__avatar {
+  display: grid;
+  flex: 0 0 2.8rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: #d92727;
+  border-radius: 50%;
+}
+
+.video__texto strong,
+.video__texto span {
+  display: block;
+  color: #ffffff;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+
+.video__texto strong {
+  font-size: clamp(1.1rem, 2.6vw, 1.75rem);
+  line-height: 1.1;
+}
+
+.video__texto span {
+  margin-top: 0.15rem;
+  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: clamp(4rem, 9vw, 5.2rem);
+  height: clamp(2.8rem, 6vw, 3.6rem);
+  background: #ff0000;
+  border-radius: 0.8rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.35);
+  transition: transform 160ms ease, background-color 160ms ease;
+}
+
+.video__play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  border-block: 0.65rem solid transparent;
+  border-left: 1rem solid #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.video__youtube {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  padding: 0.55rem 0.85rem;
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.62);
+  border-radius: 999px;
+}
+
+.video__link:hover .video__play,
+.video__link:focus-visible .video__play {
+  background: #e00000;
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .rascunho__figura img {
