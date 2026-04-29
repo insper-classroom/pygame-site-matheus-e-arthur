@@ -1,4 +1,5 @@
 :root {
+  --fonte-principal: "Segoe UI", Arial, sans-serif;
   --marrom-escuro: #2d1a10;
   --marrom: #684122;
   --marrom-claro: #a16933;
@@ -13,7 +14,7 @@
 
 body {
   min-height: 100vh;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--fonte-principal);
   color: var(--marrom-escuro);
   background:
     linear-gradient(rgba(35, 21, 12, 0.24), rgba(35, 21, 12, 0.58)),
@@ -51,7 +52,7 @@ body::before {
 
 .menu a {
   padding: 0.65rem 1rem;
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--pergaminho-claro);
@@ -89,7 +90,7 @@ body::before {
   width: fit-content;
   margin-bottom: 0.7rem;
   padding: 0.35rem 0.65rem;
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
   font-size: 0.82rem;
   font-weight: 800;
   color: var(--pergaminho-claro);
@@ -102,7 +103,7 @@ body::before {
 h1,
 h2,
 h3 {
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
 }
 
 h1 {
@@ -233,7 +234,7 @@ figcaption {
 .galeria figcaption,
 .rascunho figcaption {
   padding: 0.8rem 1rem;
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
   font-weight: 700;
   color: var(--marrom-escuro);
   background: #ffe09a;
@@ -256,7 +257,7 @@ figcaption {
   overflow: hidden;
   color: #ffffff;
   background: var(--marrom-escuro);
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
   text-decoration: none;
 }
 
@@ -439,7 +440,7 @@ figcaption {
 
 .rodape p:first-child {
   margin-bottom: 0.35rem;
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-family: var(--fonte-principal);
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--dourado);
