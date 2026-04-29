@@ -141,8 +141,8 @@ h1 {
 .conteudo-principal {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  padding-block: 2rem;
+  gap: 1.35rem;
+  padding-block: 1.5rem;
 }
 
 .painel {
@@ -235,7 +235,7 @@ figcaption {
   padding: 0.8rem 1rem;
   font-family: "Trebuchet MS", Verdana, sans-serif;
   font-weight: 700;
-  color: var(--marrom);
+  color: var(--marrom-escuro);
   background: #ffe09a;
 }
 
@@ -244,13 +244,18 @@ figcaption {
   overflow: hidden;
 }
 
+.video__moldura {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
 .video__link {
   position: relative;
   display: block;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   color: #ffffff;
-  background: #202020;
+  background: var(--marrom-escuro);
   font-family: "Trebuchet MS", Verdana, sans-serif;
   text-decoration: none;
 }
@@ -267,8 +272,8 @@ figcaption {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.7), transparent 38%),
-    linear-gradient(transparent 58%, rgba(0, 0, 0, 0.55));
+    linear-gradient(rgba(45, 26, 16, 0.72), transparent 40%),
+    linear-gradient(transparent 58%, rgba(45, 26, 16, 0.62));
 }
 
 .video__topo {
@@ -290,7 +295,7 @@ figcaption {
   place-items: center;
   font-size: 1.6rem;
   font-weight: 800;
-  background: #d92727;
+  background: var(--vermelho);
   border-radius: 50%;
 }
 
@@ -318,7 +323,7 @@ figcaption {
   z-index: 1;
   width: clamp(4rem, 9vw, 5.2rem);
   height: clamp(2.8rem, 6vw, 3.6rem);
-  background: #ff0000;
+  background: var(--vermelho);
   border-radius: 0.8rem;
   transform: translate(-50%, -50%);
   box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.35);
@@ -344,13 +349,13 @@ figcaption {
   color: #ffffff;
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   font-weight: 800;
-  background: rgba(0, 0, 0, 0.62);
+  background: rgba(45, 26, 16, 0.78);
   border-radius: 999px;
 }
 
 .video__link:hover .video__play,
 .video__link:focus-visible .video__play {
-  background: #e00000;
+  background: #8b2727;
   transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -361,27 +366,11 @@ figcaption {
   object-position: center;
 }
 
-.Log {
-  width: min(70rem, calc(100% - 2rem));
-  margin: 0 auto 2rem;
-  padding: clamp(1.2rem, 3vw, 2rem);
+.log-desenvolvimento {
   background: rgba(255, 248, 223, 0.97);
-  border: 0.35rem solid var(--marrom);
-  border-radius: 0.9rem;
-  box-shadow:
-    0 0.5rem 0 var(--marrom-escuro),
-    0 1rem 2rem var(--sombra);
 }
 
-.Log h2 {
-  margin-bottom: 1.4rem;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.05;
-  color: var(--azul);
-  text-shadow: 0.12rem 0.12rem 0 var(--dourado);
-}
-
-.Log h3 {
+.log-desenvolvimento h3 {
   width: fit-content;
   margin: 1.2rem 0 0.65rem;
   padding: 0.35rem 0.7rem;
@@ -391,11 +380,11 @@ figcaption {
   border-radius: 0.35rem;
 }
 
-.Log h3:first-of-type {
+.log-desenvolvimento h3:first-of-type {
   margin-top: 0;
 }
 
-.Log ul {
+.log-desenvolvimento ul {
   position: relative;
   display: grid;
   gap: 0.45rem;
@@ -407,7 +396,7 @@ figcaption {
   box-shadow: 0 0.35rem 0 rgba(104, 65, 34, 0.28);
 }
 
-.Log ul::before {
+.log-desenvolvimento ul::before {
   content: "";
   position: absolute;
   top: 1rem;
@@ -418,12 +407,12 @@ figcaption {
   border-radius: 999px;
 }
 
-.Log li {
+.log-desenvolvimento li {
   position: relative;
   list-style: none;
 }
 
-.Log li::before {
+.log-desenvolvimento li::before {
   content: "";
   position: absolute;
   top: 0.72rem;
@@ -480,9 +469,5 @@ figcaption {
 
   .secao-cabecalho .etiqueta {
     order: -1;
-  }
-
-  .Log {
-    width: min(100% - 2rem, 70rem);
   }
 }
