@@ -116,10 +116,51 @@ h1 {
     0.28rem 0.28rem 0 var(--marrom-escuro);
 }
 
-.hero__texto p:last-child {
+.hero__texto > p:not(.etiqueta) {
   max-width: 34rem;
+  margin-bottom: 1.2rem;
   font-size: clamp(1.05rem, 2vw, 1.35rem);
   line-height: 1.55;
+}
+
+.botao-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 3rem;
+  padding: 0.75rem 1.1rem;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--marrom-escuro);
+  text-align: center;
+  background: var(--dourado);
+  border: 0.22rem solid var(--marrom-escuro);
+  border-radius: 0.55rem;
+  box-shadow:
+    0 0.35rem 0 var(--marrom),
+    0 0.7rem 1.1rem rgba(45, 26, 16, 0.24);
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.botao-download:hover,
+.botao-download:focus-visible {
+  transform: translateY(-0.15rem);
+  background: #ffd978;
+  box-shadow:
+    0 0.5rem 0 var(--marrom),
+    0 0.9rem 1.3rem rgba(45, 26, 16, 0.28);
+}
+
+.botao-download:active {
+  transform: translateY(0.12rem);
+  box-shadow:
+    0 0.18rem 0 var(--marrom),
+    0 0.5rem 0.9rem rgba(45, 26, 16, 0.24);
 }
 
 .hero__imagem {
@@ -237,6 +278,39 @@ figcaption {
   font-weight: 700;
   color: var(--marrom-escuro);
   background: #ffe09a;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background:
+    linear-gradient(135deg, rgba(255, 248, 223, 0.98), rgba(255, 224, 154, 0.96));
+}
+
+.download__texto {
+  max-width: 42rem;
+}
+
+.download h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+  color: var(--azul);
+  text-shadow: 0.12rem 0.12rem 0 var(--dourado);
+}
+
+.download__texto p:last-child {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.botao-download--grande {
+  flex: 0 0 auto;
+  min-width: min(100%, 18rem);
+  min-height: 3.7rem;
+  padding-inline: 1.3rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .rascunho__figura,
@@ -450,7 +524,8 @@ figcaption {
   .secao-cabecalho,
   .sobre-grid,
   .galeria-grid,
-  .informacoes__conteudo {
+  .informacoes__conteudo,
+  .download {
     flex-direction: column;
   }
 
@@ -469,5 +544,10 @@ figcaption {
 
   .secao-cabecalho .etiqueta {
     order: -1;
+  }
+
+  .botao-download,
+  .botao-download--grande {
+    width: 100%;
   }
 }
